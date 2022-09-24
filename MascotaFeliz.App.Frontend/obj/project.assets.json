@@ -5743,11 +5743,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Mascota\\mascotafeliz.App\\mascotafeliz.App.frontend\\MascotaFeliz.App.Frontend.csproj",
+      "projectUniqueName": "C:\\Mascota\\mascotafeliz.app\\mascotafeliz.App.Frontend\\MascotaFeliz.App.Frontend.csproj",
       "projectName": "MascotaFeliz.App.Frontend",
-      "projectPath": "C:\\Mascota\\mascotafeliz.App\\mascotafeliz.App.frontend\\MascotaFeliz.App.Frontend.csproj",
+      "projectPath": "C:\\Mascota\\mascotafeliz.app\\mascotafeliz.App.Frontend\\MascotaFeliz.App.Frontend.csproj",
       "packagesPath": "C:\\Users\\Liliana\\.nuget\\packages\\",
-      "outputPath": "C:\\Mascota\\mascotafeliz.App\\mascotafeliz.App.frontend\\obj\\",
+      "outputPath": "C:\\Mascota\\mascotafeliz.app\\mascotafeliz.App.Frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Liliana\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5761,11 +5761,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Mascota\\mascotafeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
-              "projectPath": "C:\\Mascota\\mascotafeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
+            "C:\\Mascota\\mascotafeliz.app\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
+              "projectPath": "C:\\Mascota\\mascotafeliz.app\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
             },
-            "C:\\Mascota\\mascotafeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
-              "projectPath": "C:\\Mascota\\mascotafeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj"
+            "C:\\Mascota\\mascotafeliz.app\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
+              "projectPath": "C:\\Mascota\\mascotafeliz.app\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj"
             }
           }
         }

@@ -23,7 +23,7 @@ namespace MascotaFeliz.App.Frontend.Pages
 
         public void OnGet()
         {
-            listaMascotas = _repoMascota.GetAllMascotas();
+            listaMascotas = _repoMascota.GetAllMascota();
         }
     }
 }

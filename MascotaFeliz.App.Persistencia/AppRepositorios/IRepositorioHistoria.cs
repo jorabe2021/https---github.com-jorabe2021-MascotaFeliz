@@ -6,16 +6,16 @@ using MascotaFeliz.App.Dominio;
 
 namespace MascotaFeliz.App.Persistencia
 {
-    //Interfaz de Historia
     public interface IRepositorioHistoria
     {
-        IEnumerable<Historia> GetAllHistorias ();
-        Historia AddHistoria (Historia historia);
-        Historia UpdateHistoria (Historia historia);
-        void DeleteHistoria (int idHistoria);
-        Historia GetHistoria (int idHistoria);
+        IEnumerable<Historia> GetAllHistorias();
+        Historia AddHistoria(Historia historia);
+        Historia UpdateHistoria(Historia historia);
+        void DeleteHistoria(int idHistoria);
+        Historia GetHistoria(int idHistoria);
+    //    Historia GetHistoriaMascota(int idMascota);
+        VisitaPyP AsignarVisitaPyP(int idHistoria, int idVisitaPyP); 
     
+       
     }
 }
-
-    

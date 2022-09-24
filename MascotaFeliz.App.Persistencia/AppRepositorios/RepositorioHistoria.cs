@@ -22,13 +22,15 @@ namespace MascotaFeliz.App.Persistencia
         {
             _appContext = appContext;
         }
-        public Historia AddHistoria(Historia historia)
+
+        public Historia AddHistoria(Historia historia) //crear dueño
         {
             var historiaAdicionado = _appContext.Historias.Add(historia);
             _appContext.SaveChanges();
             return historiaAdicionado.Entity;
         }
-        public void DeleteHistoria(int idHistoria)
+
+        public void DeleteHistoria(int idHistoria)  //borrar dueño
         {
             var historiaEncontrado = _appContext.Historias.FirstOrDefault(d => d.Id == idHistoria);
             if (historiaEncontrado == null)
@@ -36,42 +38,56 @@ namespace MascotaFeliz.App.Persistencia
             _appContext.Historias.Remove(historiaEncontrado);
             _appContext.SaveChanges();
         }
-       public IEnumerable<Historia> GetAllHistorias()
+
+       public IEnumerable<Historia> GetAllHistorias()  //consultar todos los dueños
         {
-            return GetAllHistorias_();
+               return _appContext.Historias;//return GetAllHistorias();
         }
-        
-        public IEnumerable<Historia> GetHistoriasPorFiltro(string filtro)
-        {
-            var historias = GetAllHistorias(); // Obtiene todos los saludos
-            if (historias != null)  //Si se tienen saludos
-            {
-                //if (!DateTime.IsNullOrEmpty(filtro)) // Si el filtro tiene algun valor
-                //{
-                   // historias = historias.Where(s => s.FechaInicial.TryParse(filtro));
-                //}
-            }
-            return historias;
-        }
-        
-        public IEnumerable<Historia> GetAllHistorias_()
-        {
-            return _appContext.Historias;
-        }
+
+       
+       
         public Historia GetHistoria(int idHistoria)
         {
             return _appContext.Historias.FirstOrDefault(d => d.Id == idHistoria);
         }
+
+      /*  public Historia GetHistoriaMascota(int idMascota)
+        {
+           // var mascota = _appContext.Mascotas.FirstOrDefault(d => d.Id == idMascota);
+            
+            return _appContext.Historias.FirstOrDefault(d => d.Id == idHistoria);
+        }*/
+
         public Historia UpdateHistoria(Historia historia)
         {
             var historiaEncontrado = _appContext.Historias.FirstOrDefault(d => d.Id == historia.Id);
             if (historiaEncontrado != null)
             {
+                historiaEncontrado.Id = historia.Id;
                 historiaEncontrado.FechaInicial = historia.FechaInicial;
-            
+                historiaEncontrado.VisitasPyP= historia.VisitasPyP;
                 _appContext.SaveChanges();
             }
             return historiaEncontrado;
-        }
+        } 
+
+        
+        public VisitaPyP AsignarVisitaPyP(int idHistoria, int idVisitaPyP)
+        {
+            var historiaEncontrado = _appContext.Historias.FirstOrDefault(p => p.Id == idHistoria);
+            if (historiaEncontrado != null)
+            {
+                var visitaPyPEncontrado = _appContext.VisitasPyP.FirstOrDefault(m => m.Id == idVisitaPyP);
+                if (visitaPyPEncontrado != null)
+                {
+                    historiaEncontrado.VisitasPyP.Add(visitaPyPEncontrado);
+                    _appContext.SaveChanges();
+                }
+                return visitaPyPEncontrado;
+            }
+            return null;
+        } 
+    
+
     }
 }

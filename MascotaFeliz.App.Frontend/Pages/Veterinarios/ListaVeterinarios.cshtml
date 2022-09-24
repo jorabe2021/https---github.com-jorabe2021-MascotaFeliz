@@ -5,6 +5,14 @@
 
 <h1>Listado de Veterinarios</h1>
 <table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+        <th>Tarjeta Profesional</th>
+        <th>Acciones</th>
+    </tr>
     @foreach (var veterinario in Model.listaVeterinarios)
     {
         <tr>
@@ -12,9 +20,13 @@
 
             <td>@veterinario.Nombre</td>
             <td>@veterinario.Apellidos</td>
+            <td>@veterinario.Direccion</td>
+            <td>@veterinario.Telefono</td>
+            <td>@veterinario.TarjetaProfesional</td>
 
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./DetallesVeterinarios" asp-route-duenoId="@veterinario.Id">
+                <i class="fas fa-info-circle fa-lg">Detalle</i>
                     Detalle Veterinario
                 </a>
             </td>
@@ -27,3 +39,8 @@
         </tr>
     }
 </table>
+</table>
+<a asp-page="./EditVeterinario" class = "btn btn-primary"> Adiconar Nuevo Veterinario</a>
+<div>
+      <a href="./EditarVeterinario" class="boton-veterinario">Adicionar Veterinario</a>
+</div>

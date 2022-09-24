@@ -17,8 +17,7 @@ namespace MascotaFeliz.App.Frontend.Pages
 
         public ListaVeterinariosModel()
         {
-            this._repoVeterinario =
-                new RepositorioVeterinario(new Persistencia.AppContext());
+            this._repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
         }
 
         public void OnGet()
